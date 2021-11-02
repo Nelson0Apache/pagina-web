@@ -3,6 +3,7 @@ import styles from './productsdeletePage.module.css';
 import usuarios from './icon/usuarios.png';
 import eliminar from './icon/eliminar.png';
 import actualizar from './icon/actualizar.png';
+import {Link} from 'react-router-dom';
 
 const productsdeletePage = props => {
     return (
@@ -14,21 +15,21 @@ const productsdeletePage = props => {
                     src={usuarios}
                     alt={''}
                     />
-                    <h5>Agregar</h5>
+                    <Link to='/module/products/form'>Agregar</Link>
                 </div>
                 <div className={styles.modules}>
                     <img className={styles.usuarios}
                     src={actualizar}
                     alt={''}
                     />
-                    <h5>Actualizar</h5>
+                    <Link to='/module/products/upgrade'>Actualizar</Link>
                 </div>
                 <div className={styles.modules}>
                     <img className={styles.usuarios}
                     src={eliminar}
                     alt={''}
                     />
-                    <h5>Eliminar</h5>
+                    <Link to='/module/products/delete'>Eliminar</Link>
                 </div>
             </div>
             <div className={styles['container-table']}>
