@@ -40,6 +40,7 @@ const productsPage = props => {
                             <th>ID PRODUCTOS</th>
                             <th>DESCRIPCIÓN DEL PRODUCTO</th>
                             <th>VALOR UNITARIO</th>
+                            <th>CANTIDAD</th>
                             <th>ESTADO</th>
                         </tr>
                     </thead>
@@ -48,7 +49,8 @@ const productsPage = props => {
                             <td>001</td>
                             <td>Zapatos Masculino Talla 32 azul</td>
                             <td>20,000</td>
-                            <td>Dispoible</td>
+                            <td>2</td>
+                            <td>Disponible</td>
                         </tr>
                     </tbody>
                 </table>
