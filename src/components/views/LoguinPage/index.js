@@ -1,7 +1,12 @@
 import style from './loguinPage.module.css';
 import logostore from './icons/logostore.png';
+import GoogleLogin from 'react-google-login';
 
 function loguinPage() {
+  const responseGoogle = (response) => {
+    console.log(response);
+    console.log(response.profileObj);
+  }
   return (
     <div className={style.App}>
       <header className={style['App-header']}>
@@ -10,7 +15,14 @@ function loguinPage() {
             <img src={logostore} className={style['logo-store']} alt={style.logo}/>
             <div className={style['social-login']}>
               <div className={style['social-login-element']}>
-                <span>Google</span>
+                <br  /><br  />
+                <GoogleLogin
+              clientId="567785216612-clf3196se3emp7qfascjd1ptfq044ppp.apps.googleusercontent.com"
+              buttonText="Login"
+              onSuccess={responseGoogle}
+              onFailure={responseGoogle}
+              cookiePolicy={'single_host_origin'}
+            />,
               </div>
             </div>
             <form className={style['inputs-container']}>
